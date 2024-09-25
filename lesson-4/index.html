@@ -37,9 +37,9 @@
 			<!-- STEP 14: Combine device widths and column width settings (col-md-*) -->
 			<!-- STEP 15: Set different column widths for each of the device widths (col-sm-4 col-md-3 col-lg-5 col-xl-6, for example) -->
 			<main>
-				<section class="row">
+				<section class="row gy-5">
 					<article class="col-sm-7 col-lg-12 col-xl-5">
-						<h2>Lorem</h2>
+						<h2 class="p-3">Lorem</h2>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit lobortis dui, eu congue neque placerat in. Aliquam placerat porttitor lectus eu porta.</p>
 					</article><!-- .col -->
 					<article class="col-sm-5 col-lg-4 col-xl-2">
@@ -56,24 +56,34 @@
 					</article><!-- .col -->
 				</section><!-- .row -->
 		<!-- STEP 16: Build a second row element to capture the rest of the content inside the <main> -->
-
+				<section class="row">
+					<div class="col-2">
 						<h2>Amet</h2>
 						<p>Cras sed suscipit nisi. Aenean commodo nunc eget tortor auctor bibendum. Ut posuere arcu velit, vel tincidunt lectus sagittis et.</p>
-
+					</div><!-- .col -->
+					<div class="col-3">
 						<h2>Consectetur</h2>
 						<p>Pellentesque gravida luctus pharetra. In felis neque, feugiat at lacus eget, faucibus iaculis velit. Nullam tristique, justo eget blandit finibus, dui justo aliquam ligula, sit amet iaculis quam lectus sed ex.</p>
-
+					</div><!-- .col -->
 		<!-- STEP 17: Add 3 columns, with 2, 3, and 7 as the spans - the last column will contain the last 3 headings and paragraphs -->
 		<!-- STEP 18: Create 3 rows inside the last column, each with one column -->
-
+					<div class="col-7">
+						<section class="row">
+							<aside class="col-12">
 								<h2>Adipiscing</h2>
 								<p>Sed ac mi ut ante mollis tristique. In sed nisl quis est sollicitudin varius non et velit. Sed turpis nunc, varius vitae iaculis ut, viverra eget neque.</p>
-
+							</aside><!-- .col -->
+							<aside class="col-6">
 								<h2>Elit</h2>
 								<p>Morbi vel ipsum id dolor rutrum lacinia. Praesent ullamcorper vulputate libero a vestibulum. Cras mollis mollis magna, ut mattis lacus convallis vel.</p>
-
+							</aside><!-- .col -->
+							<aside class="col-6">
 								<h2>In Hendrerit</h2>
 								<p>Praesent accumsan, odio quis varius suscipit, nulla ante tincidunt nisl, non interdum quam eros nec nibh. Nulla eget dapibus metus, ac ultricies purus. Vestibulum et tristique felis.</p>
+							</aside><!-- .col -->
+						</section><!-- .row -->
+					</div><!-- .col -->
+				</section><!-- .row -->
 			</main>
 			<footer>
 				<p><small>Learn more about the <a href="http://getbootstrap.com/css/#grid" title="View the Bootstrap documentation for the Grid">Bootstrap Grid System</a>.</small></p>
