@@ -7,32 +7,58 @@
 
 		<!-- Bootstrap -->
 		<!-- STEP 1: Link to the Bootstrap CSS using a Content Distribution Network (CDN), and the Bootstrap JS libraries (jQuery, popper.js, and bootstrap.js) at the bottom of the page template -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
 		<!-- STEP 11: Link to your custom styles, then open the CSS file in your code editor -->
 
 	</head>
 	<body>
 		<!-- STEP 2: Build a fluid or a fixed-width container for proper alignment and padding of content-->
-
+		<div class="container">
 		<!-- STEP 3: Build out your basic page-level containers, HEADER, MAIN, FOOTER,and add an H1 inside the HEADER to begin the document outline -->
-
+			<header>
 				<h1>Carousel | Bootstrap</h1>
-
-		<!-- STEP 4: Copy the example code from the Bootstrap documentation (use the handy "COPY" button to the top right of the code example panel), paste here, and adjust formatting -->
-		<!-- STEP 5: Replace any generic elements with more semantic sectioning or phrasing elements - add all appropriate classes to elements -->
-		<!-- STEP 6: Add a caption to each slide -->
-		<!-- STEP 7: Add a placeholder image for each slide (http://via.placeholder.com/1200x400) -->
-		<!-- STEP 8: Add a third slide, and point IMG elements to photos of cars provided in img/ directory -->
-		<!-- STEP 9a: Add the next/prev icons (add the HTML with the appropriate classes below) -->
-		<!-- STEP 9b: Change the icons - consult https://icons.getbootstrap.com/ to pick a new set of arrows using SVG and insert below -->
-		<!-- STEP 9c: Add the carousel indicators just inside the #carousel-cars, but before the .carousel-inner using the appropriate HTML -->
-		<!-- STEP 10: Let's change the position of the captions - go to STEP 11 above -->
-
-
-			<p><small>Learn more about the <a href="https://getbootstrap.com/docs/4.5/components/carousel/" title="View the Bootstrap documentation for the JavaScript Carousel Component">Bootstrap Carousel JavaScript Component</a>.</small></p>
-
+			</header>
+			<main>
+				<div id="carouselExample" class="carousel slide">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="..." class="d-block w-100" alt="...">
+						</div>
+						<div class="carousel-item">
+							<img src="..." class="d-block w-100" alt="...">
+						</div>
+						<div class="carousel-item">
+							<img src="..." class="d-block w-100" alt="...">
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				  </div>
+		
+				<!-- STEP 4: Copy the example code from the Bootstrap documentation (use the handy "COPY" button to the top right of the code example panel), paste here, and adjust formatting -->
+				<!-- STEP 5: Replace any generic elements with more semantic sectioning or phrasing elements - add all appropriate classes to elements -->
+				<!-- STEP 6: Add a caption to each slide -->
+				<!-- STEP 7: Add a placeholder image for each slide (http://via.placeholder.com/1200x400) -->
+				<!-- STEP 8: Add a third slide, and point IMG elements to photos of cars provided in img/ directory -->
+				<!-- STEP 9a: Add the next/prev icons (add the HTML with the appropriate classes below) -->
+				<!-- STEP 9b: Change the icons - consult https://icons.getbootstrap.com/ to pick a new set of arrows using SVG and insert below -->
+				<!-- STEP 9c: Add the carousel indicators just inside the #carousel-cars, but before the .carousel-inner using the appropriate HTML -->
+				<!-- STEP 10: Let's change the position of the captions - go to STEP 11 above -->
+			</main>
+			<footer>
+				<p><small>Learn more about the <a href="https://getbootstrap.com/docs/4.5/components/carousel/" title="View the Bootstrap documentation for the JavaScript Carousel Component">Bootstrap Carousel JavaScript Component</a>.</small></p>
+			</footer>
+		</div><!-- .container -->
 		<!-- Include Popper JS, then Bootstrap JS -->
-
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 		<!-- STEP 14: Use custom JavaScript to control the carousel. Attach js/custom.js below -->
 
 		<!-- IMAGE ATTRIBUTIONS
