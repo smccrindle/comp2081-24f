@@ -22,24 +22,30 @@
 					<button class="navbar-toggler" type="button" data-bs-target="#globalNav" data-bs-toggle="collapse" aria-controls="globaNav" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
-					<div class="collapse navbar-collapse" id="globalNav">
-						<ul class="navbar-nav">
-							<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-							<li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-							<li class="nav-item"><a href="#" class="nav-link">Account</a></li>
-							<li class="nav-item dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Dropdown</a>
-								<div class="dropdown-menu">
-									<a href="#" class="dropdown-item">Action</a>
-									<a href="#" class="dropdown-item">Another action</a>
-									<a href="#" class="dropdown-item">Yet another action</a>
-								</div>
-							</li>
-						</ul>
-						<form class="d-flex" role="search">
-							<input class="form-control me-1" type="search" placeholder="Search" aria-label="Search"> 
-							<button class="btn btn-outline-light" type="submit">Search</button>
-						</form>	
+					<div class="offcanvas offcanvas-end" id="globalNav">
+						<div class="offcanvas-header">
+							<h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="globalNav" aria-label="Close"></button>
+						</div>
+						<div class="offcanvas-body">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+								<li class="nav-item"><a href="#" class="nav-link active">Features</a></li>
+								<li class="nav-item"><a href="#" class="nav-link">Account</a></li>
+								<li class="nav-item dropdown">
+									<a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Dropdown</a>
+									<div class="dropdown-menu">
+										<a href="#" class="dropdown-item">Action</a>
+										<a href="#" class="dropdown-item">Another action</a>
+										<a href="#" class="dropdown-item">Yet another action</a>
+									</div>
+								</li>
+							</ul>
+							<form class="d-flex ml-auto" role="search">
+								<input class="form-control me-1" type="search" placeholder="Search" aria-label="Search"> 
+								<button class="btn btn-outline-light" type="submit">Search</button>
+							</form>	
+						</div><!-- .offcanvas-body -->
 					</div><!-- .collapse -->
 				</nav>
 <!-- STEP 5: Build out a NAV element with the classes .navbar - add .navbar-light, and .bg-light to set the text and background colors - include role="navigation" for accessibilty -->
