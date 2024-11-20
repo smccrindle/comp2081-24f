@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+/* This lesson is adapted from the outstanding tutorial called "Advanced Grid Properties" at The Odin Project (https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-advanced-grid-properties#introduction) */
+
+/* Use box-sixing: border-box */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    font-family: sans-serif;
+}
+main {
+    width: 80%;
+}
+
+/* The <section> element in the <main> will be the grid container */
+main > section {
+    hyphens: auto;
+    /* STEP 1: Set up the grid */
+    display: grid;
+    
+    /* STEP 2: Let's allow the user to resize the grid container so we can see the responsive behavior */
+    resize: both;
+    
+    /* STEP 3: Add overflow auto so that the grid container enables scrolling if it is resized to be too small to contain the grid items */
+    overflow: auto;
+    
+    /* STEP 4: Add a gap between grid items so we can better see how the items are being arranged inside the grid container */
+    gap: 5px;
+    background-color: lightgrey;
+    padding: 5px;
+    
+    /* STEP 5: Set up a basic grid with 2 rows and 5 columns */
+    /* grid-template-columns: 150px 150px 150px 150px 150px;
+    grid-template-rows: 225px 225px; */
+    /* STEP 6: Let's optimize the code with the CSS repeat() function */
+    /* grid-template-columns: repeat(5, 150px);
+    grid-template-rows: repeat(2, 225px); */
+    /* STEP 7: Now change the fixed width and height of the rows and columns to fractional units (fr) */
+    /* grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr); */
+    
+    /* STEP 8: Offer twice as much space to the first 2 columns as is offered to the remaining 3 */
+    /* grid-template-columns: repeat(2, 2fr) repeat(3, 1fr); */
+    /* grid-template-columns: repeat(2, min-content) repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr); */
+
+    /* Notice when you shrink the width of the grid container, there is a minimum size for each grid item? This is the min-content (very useful CSS property) */
+
+    /* STEP 9: Let's be more prescriptive with height and width of the grid items - apply min() and max() */
+    /* grid-template-columns: repeat(5, max(120px, 10%));
+    grid-template-rows: repeat(2, min(250px, 40%)); */
+
+    /* min() is essentially setting a max-height, and max() is effectively setting a min-height */
+
+    /* STEP 10: Alternatively, we can set minimum and maximum limits within which the columns or rows can expand or contract with minmax() - this is a CSS Grid-specific property/function */
+    /* grid-template-columns: repeat(5, minmax(min-content, 200px));
+    grid-template-rows: repeat(2, minmax(min-content, 300px)); */
+
+    /* Note that we reverted back to fr units for the rows - this allows the rows to expand in width if they can, but not to shrink to less than min-content */
+
+    /* STEP 11: If there is an ideal width you would like to specify, but within upper and lower limits, use clamp() */
+    /* grid-template-columns: repeat(5, clamp(125px, 20%, 250px)); */
+
+    /* STEP 12: What if you wanted the layout to feature a dynamic number of columns? The auto-fit and auto-fill parameters of the repeat() function can help - avoiding the need for extensive @media queries */
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 250px)); */
+
+    /* STEP 13: Combining auto-fit with minmax() will enable an even more adaptive grid layout experience */
+    /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+    grid-template-columns: repeat(auto-fill, clamp(125px, 20%, 250px));
+    grid-template-rows: 200px;
+
+    /* STEP 14: Try auto-fill instead - the difference is subtle but make the change, then observe the behavior using the grid display in the browser dev tools */
+    
+}
+
+/* Each of the <article> elements inside the parent <section> element will be our grid items */
+main > section > article {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: white;
+}
