@@ -1,0 +1,27 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+/* STEP 5: Set the height and width for the SVG element */
+svg {
+    border: 5px dotted grey;
+    width: 75%;
+    height: auto;
+}
+/* STEP 6: Set up a transition for the dashed line circle that serves as the pie wedge */
+circle[stroke-dasharray] {
+    transition: all 0.5s;
+}
+
+/* STEP 7: Encourage user interaction with the chart by changing the cursor */
+svg:hover {
+    cursor: pointer;
+}
+
+/* STEP 8: Set up the dash and the space for the dashed line at zero to start with */
+svg:active circle[stroke-dasharray] {
+    stroke-dasharray: 0 0;
+}
+
+/* STEP 9: Set a more attractive font-family for the chart, then head back to pie-graph.html for the next step */
+svg text {
+    font-family: "Passion One";
+}

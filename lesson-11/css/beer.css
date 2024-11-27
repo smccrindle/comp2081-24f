@@ -36,26 +36,26 @@ a:hover {
 /* Styles for the hero image */
 .hero {
   /* Photo by mnm.all on Unsplash */
-  background: url('https://images.unsplash.com/photo-1518176258769-f227c798150e') center;
+  background: url('https://images.unsplash.com/photo-1518176258769-f227c798150e') center bottom;
   background-size: cover;
   padding: 4rem 2rem;
   /* grid styles */
   display: grid;
   /* STEP 1: This will result in four columns, each one of 1fr */
-  
+  /* grid-template-columns: 1fr 1fr 1fr 1fr; */
   /* STEP 3: This is the same as grid-template-columns: 1fr 1fr 1fr 1fr; */
-  
+  /* grid-template-columns: repeat(4, 1fr); */
   /* STEP 5: Set a minmax for each column */
-  
+  /* grid-template-columns: repeat(4, minmax(240px, 1fr)); */
   /* STEP 2: This will result in two rows, each one of 300px */
-  
+  /* grid-template-rows: 300px 300px; */
   /* STEP 4: This is the same as grid-template-rows: 300px 300px; */
-  
+  /* grid-template-rows: repeat(2, 300px); */
   /* STEP 6: Reduce the rows to one */
-  
+  grid-template-rows: 300px;
 
   /* STEP 7: Include the auto-fit property into the mix */
-  
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   align-items: center;
 }
 
@@ -89,7 +89,7 @@ a:hover {
   margin: 0;
   display: grid;
   /* STEP 8: Modify the breweries grid into a responsive layout with repeat(), auto-fit, and minmax() */
-  
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 1rem;
 }
 

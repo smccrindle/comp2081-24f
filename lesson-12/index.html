@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>SVG, CSS, and JS | COMP2081 Advanced UI Design Using CSS</title>
+		<style>
+            /* STEP 4: Put a diagnostic border around the SVG element and set the height and width to match the numbers in the viewBox attribute */
+            svg {
+                border: 3px dashed green;
+                height: 500px;
+                width: 500px;
+            }
+            /* STEP 6: Remove the fill="red" from the <circle /> element below, then add it to a new rule for the circle element as a CSS property */
+            circle {
+                fill: orange;
+                r: 150;
+                cx: 100;
+                cy: 200;
+                transition: all 0.5s;
+            }
+            /* STEP 7: Remove the r="250" from the <circle /> element below, then add it to the above rule as well */
+            /* STEP 8: Remove the origin coordinates from the <circle /> element below as well and add to the above rule */
+
+            /* STEP 9: Add a :hover pseudoclass for the circle and modify all of the above properties and values set in the circle rule */
+            circle:hover {
+                fill: red;
+                r: 250;
+                cx: 150;
+                cy: 225;
+            }
+            
+            /* STEP 10: Add a transition for all properties to the circle rule above - SVG2 and CSS play very nicely together! Now let's go to pie-graph.html and build a practical application for SVG and CSS */
+
+        </style>
+	</head>
+	<body>
+		<!-- STEP 1: Create a simple SVG element with viewBox at 0,0 and 500 x 500 in size (note that for embedded SVG, the xmlns attribute is not required - only for standalone SVG documents) -->
+        <svg viewBox="0 0 500 500">
+            <!-- STEP 2: Create a simple circle with the centre (origin) at 250,250 with a radius (r) of 250, and a fill of red (or any colour) -->
+			<circle />
+		</svg>
+        <!-- STEP 3: Notice how the SVG element is at 100% width in the browser -->
+        <!-- STEP 5a: Adjust the viewBox origin to -100 and -150, then refresh the browser window -->
+        <!-- STEP 5b: Change it to positive values and have another look at the result in the browser -->
+        <!-- STEP 5c: Change it back to 0,0 then proceed to the above <style> element for the next step -->
+
+		<!-- Thank you to https://css-tricks.com/svg-properties-and-css/ for the inspiration for this lesson -->
+	</body>
+</html>
