@@ -1,0 +1,36 @@
+/* STEP 1: Declare variables */
+:root {
+    --font-stack: Helvetica, Arial, sans-serif;
+    --primary-color: grey;
+    --secondary-color: slateblue;
+    --background-color: lightgrey;
+    --whitespace: 1rem;
+}
+
+/* STEP 2: Apply variables */
+body {
+	font: 120%/1.4 var(--font-stack);
+    color: var(--primary-color);
+}
+
+
+/* STEP X: Nested rules */
+header {
+	h1 {
+		color: var(--secondary-color);
+	}
+	& p {
+		color: var(--secondary-color);
+        text-transform: uppercase;
+		font-weight: bold;
+	}
+}
+/* header p {
+    text-transform: uppercase;
+    font-weight: bold;
+} */
+
+/* STEP 3: CSS Calculations */
+main {
+    margin: calc(2 * var(--whitespace));
+}

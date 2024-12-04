@@ -1,0 +1,14 @@
+/* STEP 1: Declare and use variables */
+/* STEP 2: Nesting CSS selectors */
+/* STEP 3: Partials and Importing */
+/* Open reset.css, rename it _reset.scss and put @import 'reset'; at the top of this .scss file */
+/* STEP 4: Mixins */
+/* STEP 5: Extend/Inheritance */
+/* STEP 5: Operators */
+main > section {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+/* http://sass-lang.com/guide *//*# sourceMappingURL=sass.css.map */

@@ -1,0 +1,86 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* STEP 1: Declare and use variables */
+body {
+  font: 120%/1.4 Helvetica, Arial, sans-serif;
+  color: grey;
+}
+
+/* STEP 2: Nesting CSS selectors */
+header h1 {
+  color: slateblue;
+}
+header p {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* STEP 3: Partials and Importing */
+/* Open reset.css, rename it _reset.scss and put @import 'reset'; at the top of this .scss file */
+/* STEP 4: Mixins */
+header {
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px darkgrey;
+  border: 5px solid grey;
+  background-color: lightgrey;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+main {
+  margin: 2rem;
+}
+
+footer {
+  border-radius: 5px;
+  box-shadow: 2px 2px 3px darkgrey;
+  border: 5px solid grey;
+  background-color: lightgrey;
+  padding: 2rem;
+  margin: 2rem;
+}
+
+/* STEP 5: Extend/Inheritance */
+.message, .warning, .error, .success {
+  border: 5px dashed grey;
+  padding: 1rem;
+  margin: 1rem;
+  color: black;
+  font-weight: bold;
+  background-color: lightblue;
+}
+
+.success {
+  background-color: lightgreen;
+}
+
+.error {
+  background-color: lightcoral;
+}
+
+.warning {
+  background-color: orange;
+}
+
+/* STEP 5: Operators */
+main > section {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+main > section > article {
+  width: 62.5%;
+}
+
+main > section > aside {
+  width: 62.5%;
+}
+
+/* http://sass-lang.com/guide *//*# sourceMappingURL=sass.css.map */
