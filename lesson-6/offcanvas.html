@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Offcanvas | Bootstrap</title>
+	<!-- STEP 1: Link to the Bootstrap CSS using a Content Distribution Network (CDN) (done for you!) -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+	<link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container">
+		<header class="mb-5">
+			<h1>Offcanvas | Bootstrap</h1>
+			<!-- STEP 3a: Create a BUTTON element to toggle the Offcanvas menu panel (add the class "btn btn-primary") -->
+			<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+				data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu">Menu</button>
+				<!-- STEP 3b: Add the data-bs-toggle="offcanvas" (for functionality), and target the menu itself (yet to be built) with data-bs-target="#offcanvasMenu" (links this button to the Offcanvas) -->
+			
+				<!-- STEP 4a: Create the Offcanvas menu panel using a NAV element -->
+			<nav class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasMenu"
+				aria-labelledby="offcanvasMenuLabel">
+				<!-- STEP 5a: Create a DIV element with class="offcanvas-header" to function as the Offcanvas header -->
+				<div class="offcanvas-header">
+					<h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+				</div>
+				<!-- STEP 5b: Create a nested H5 and set the class to "offcanvas-header" -->
+				<!-- STEP 5c: Build the close button for the panel with class="btn-close" and bind it to the Offcanvas component with data-bs-dismiss="offcanvas" - note there is no content between the BUTTON tags -->
+				<div class="offcanvas-body">
+					<ul>
+						<li><a href="#subhead1">A Subheading</a></li>
+						<li><a href="#subhead2">Another Subheading</a></li>
+						<li><a href="#subhead3">Yet Another Subheading</a></li>
+						<li><a href="#subhead4">And Another</a></li>
+						<li><a href="#subhead5">And On It Goes</a></li>
+						<li><a href="#subhead6">When Will It Stop?</a></li>
+						<li><a href="#subhead7">Still Going…</a></li>
+						<li><a href="#subhead8">…And Going…</a></li>
+						<li><a href="#subhead9">…Nearly There…</a></li>
+						<li><a href="#subhead10">…At Last</a></li>
+					</ul>
+				</div>
+				<!-- STEP 6: Surround the above UL with a DIV with class="offcanvas-body" -->
+			</nav>
+			<!-- STEP 4b: To the above NAV, add the class "offcanvas offcanvas-start", add the id that matches the data-bs-target value from the BUTTON element in STEP 3b, set the tabindex to "-1" so the user can't tab through the panel, and set data-bs-scroll to "true" so the rest of the page is scrollable -->
+			<!-- STEP 4c: Note that data-bs-backdrop="true" is default, so if you don't want the backdrop, this attribute needs to be set to false -->
+
+			<!-- STEP 7: Add the recommended ARIA attributes to the appropriate elements above to complete the Offcanvas component -->
+		</header>
+		<main>
+			<section>
+				<h2 id="subhead1">A Subheading</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit lobortis dui, eu congue neque
+					placerat in. Aliquam placerat porttitor lectus eu porta. Duis aliquet volutpat magna quis pharetra.
+					Phasellus turpis dui, suscipit lacinia velit quis, hendrerit pellentesque nibh. Nunc sed leo sit amet
+					dui ultricies lobortis ut id ex. Donec efficitur libero at fringilla tempor. Etiam sodales arcu vitae
+					dui finibus tempor at venenatis nunc.</p>
+			</section>
+			<section>
+				<h2 id="subhead2">Another Subheading</h2>
+				<p>Cras sed suscipit nisi. Aenean commodo nunc eget tortor auctor bibendum. Ut posuere arcu velit, vel
+					tincidunt lectus sagittis et. Pellentesque gravida luctus pharetra. In felis neque, feugiat at lacus
+					eget, faucibus iaculis velit. Nullam tristique, justo eget blandit finibus, dui justo aliquam ligula,
+					sit amet iaculis quam lectus sed ex. Sed ac mi ut ante mollis tristique. In sed nisl quis est
+					sollicitudin varius non et velit. Sed turpis nunc, varius vitae iaculis ut, viverra eget neque.</p>
+			</section>
+			<section>
+				<h2 id="subhead3">Yet Another Subheading</h2>
+				<p>Morbi vel ipsum id dolor rutrum lacinia. Praesent ullamcorper vulputate libero a vestibulum. Cras mollis
+					mollis magna, ut mattis lacus convallis vel. Praesent accumsan, odio quis varius suscipit, nulla ante
+					tincidunt nisl, non interdum quam eros nec nibh. Nulla eget dapibus metus, ac ultricies purus.
+					Vestibulum et tristique felis. Nulla tempor, libero quis gravida suscipit, quam felis tempus metus, eu
+					congue lectus orci a leo. Phasellus tincidunt nibh vel dolor vehicula viverra vitae ut metus. In
+					faucibus nulla metus, eget bibendum ex condimentum a. Morbi vel lobortis lacus, vitae malesuada sapien.
+					Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse non
+					velit lacus. Ut finibus pretium tellus, in aliquet purus sodales ut. Phasellus in nisi felis.
+					Suspendisse at laoreet nunc. Vestibulum cursus at ex ut pharetra.</p>
+			</section>
+			<section>
+				<h2 id="subhead4">And Another</h2>
+				<p>Mauris in orci ac neque suscipit vestibulum vitae id leo. Etiam sem massa, semper id est euismod, sodales
+					malesuada quam. Mauris placerat libero nibh, non interdum purus porttitor in. Donec eget justo nisi. In
+					libero erat, iaculis in libero sed, eleifend varius lectus. Curabitur euismod metus condimentum,
+					pellentesque nunc non, luctus dolor. Nam condimentum nec nisi ac pretium. Vivamus et ex a risus lacinia
+					facilisis. Sed non odio lacus. Etiam consequat felis massa, tristique semper neque elementum sed.
+					Vestibulum a lectus metus.</p>
+			</section>
+			<section>
+				<h2 id="subhead5">And On It Goes</h2>
+				<p>In scelerisque sit amet mi non scelerisque. Cum sociis natoque penatibus et magnis dis parturient montes,
+					nascetur ridiculus mus. Ut dictum tincidunt dolor, accumsan pellentesque tortor fringilla at. Praesent
+					hendrerit, nunc sit amet tristique pretium, ex massa fringilla leo, gravida consectetur sapien sapien
+					eget quam. Suspendisse placerat et est vitae aliquet. Maecenas imperdiet elementum lacinia. Aliquam vel
+					feugiat nisi, id venenatis dui. Mauris tempor cursus gravida. Vivamus maximus ut purus nec auctor.</p>
+			</section>
+			<section>
+				<h2 id="subhead6">When Will It Stop?</h2>
+				<p>Donec tellus augue, faucibus at ipsum eget, ullamcorper lacinia magna. Suspendisse tincidunt tortor odio,
+					nec blandit quam hendrerit sit amet. Etiam iaculis libero sed nisl luctus, in efficitur libero
+					ullamcorper. Cras fermentum et ex id volutpat. Etiam vitae massa quis diam ultrices sollicitudin in a
+					lectus. Fusce sem ex, vulputate quis vestibulum id, tempor quis ante. Sed vitae magna nibh.</p>
+			</section>
+			<section>
+				<h2 id="subhead7">Still Going…</h2>
+				<p>Fusce auctor lacinia euismod. Quisque hendrerit orci ut nibh porta bibendum at eget mauris. Maecenas
+					dapibus ligula in fermentum condimentum. Vivamus tempus sit amet lacus eu finibus. Nullam viverra, augue
+					ac bibendum ornare, mi sapien faucibus odio, eget volutpat augue felis vel elit. Vestibulum condimentum
+					sapien dui, nec semper erat tristique ut. Sed eget est nec ipsum finibus viverra eu et urna. Fusce
+					tempor faucibus ligula, eu fermentum justo suscipit quis. Mauris luctus ornare justo, at viverra neque.
+					Nam mauris lectus, efficitur at lacinia convallis, molestie id enim. Donec malesuada mi sed justo
+					consequat efficitur. Nulla a eleifend magna. Suspendisse id lectus dapibus, tempor magna id, vestibulum
+					felis. Nulla ac ex elit. Pellentesque et suscipit tellus.</p>
+			</section>
+			<section>
+				<h2 id="subhead8">…And Going…</h2>
+				<p>Vestibulum fringilla nisl vel finibus fringilla. Nulla ut mi et turpis vestibulum malesuada. Duis
+					consequat faucibus dui, ac dictum ipsum iaculis ut. Quisque varius cursus felis et vehicula. In vel ex
+					in est sodales tincidunt. Fusce quam ipsum, tristique sit amet risus sed, accumsan rutrum leo. Nulla
+					ultrices mauris orci, vitae hendrerit sem viverra quis. Sed sit amet odio lectus. Donec iaculis tortor
+					vitae vestibulum iaculis. Nunc sagittis sem augue, ac ullamcorper sem faucibus eu. Donec eget gravida
+					massa. Curabitur tincidunt imperdiet magna quis tempus. Proin eu dolor ac odio dapibus pharetra.
+					Maecenas ornare convallis lacinia. Vestibulum ultricies eleifend auctor. Cras ut dolor id nunc posuere
+					tempor.</p>
+			</section>
+			<section>
+				<h2 id="subhead9">…Nearly There…</h2>
+				<p>Praesent ultrices scelerisque scelerisque. Aliquam blandit pellentesque risus et mollis. Donec hendrerit
+					posuere eros, eu eleifend turpis ultrices ut. Curabitur in metus elit. Suspendisse placerat tortor
+					purus, non vulputate dui pharetra nec. Mauris porttitor sit amet diam quis semper. Nunc a arcu
+					vestibulum, dignissim purus in, egestas urna. Nullam in mollis odio. Phasellus tempus justo eu lacus
+					tincidunt dictum. Duis ac dolor dapibus, ornare arcu porttitor, gravida leo. Ut enim justo, tempus a
+					interdum maximus, efficitur at nunc. Duis maximus sit amet arcu et vehicula.</p>
+			</section>
+			<section>
+				<h2 id="subhead10">…At Last</h2>
+				<p>Aenean felis libero, bibendum sed nunc sit amet, volutpat mattis arcu. Nunc pellentesque ac neque vel
+					iaculis. Cras eget interdum sapien, dictum malesuada arcu. Morbi imperdiet auctor nibh id egestas. Nunc
+					quis luctus diam. Nunc lectus orci, congue a erat sagittis, malesuada blandit nunc. Nulla ornare sem ut
+					sagittis dignissim. Donec maximus, tellus vel maximus varius, turpis ante ultrices urna, non tincidunt
+					velit magna non turpis.</p>
+			</section>
+		</main>
+		<footer>
+			<p><small>Learn more about the <a href="https://getbootstrap.com/docs/5.2/components/navbar/"
+						title="View the Bootstrap documentation for the Navbar Component">Bootstrap Navbar
+						Component</a>.</small>
+		</footer>
+	</div>
+	<!-- STEP 2: Attach the supporting JavaScript Libraries (also done for you!)-->
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+		integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+		integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
